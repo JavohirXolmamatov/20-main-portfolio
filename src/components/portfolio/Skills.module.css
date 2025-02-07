@@ -1,0 +1,28 @@
+.skills {
+  height: 82vh;
+}
+
+.h1 {
+  font-size: 60px;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.textGrad {
+  background-image: linear-gradient(
+    to right,
+    #fa6565 0%,
+    #4a569d 51%,
+    #dc2424 100%
+  );
+  background-size: 200% auto;
+  color: transparent; /* Matnni yashirish */
+  -webkit-background-clip: text; /* Safari va Chrome uchun */
+  background-clip: text;
+  transition: 0.5s;
+}
+
+.textGrad:hover {
+  background-position: right center;
+}

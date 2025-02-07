@@ -1,0 +1,19 @@
+components
+dashboard --- site haqida qisqacha malumotlar
+--- navbar --> logo, sign in, log in,
+
+login page
+sign page
+
+main page --- asosiy oynaga kiradi
+--- navbar --> logo, hearth, profile
+
+search navbar
+ujiz, detektive, fantastic, komidie, ........
+search panel
+
+movieslar ruyhati
+
+har bir moviy uchun page
+
+

@@ -1,0 +1,73 @@
+.left {
+  width: 50%;
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.h1 {
+  font-size: 80px;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.h4 {
+  color: rgb(210, 166, 166);
+  margin-bottom: 20px;
+}
+
+.h4 span {
+  color: #4a569d;
+}
+
+.btnGrad {
+  background-image: linear-gradient(
+    to right,
+    #dc2424 0%,
+    #4a569d 51%,
+    #dc2424 100%
+  );
+}
+.btnGrad {
+  margin: 10px;
+  padding: 10px 24px;
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 15px;
+  display: block;
+  border: 0;
+}
+
+.btnGrad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.textGrad {
+  background-image: linear-gradient(
+    to right,
+    #dc2424 0%,
+    #4a569d 51%,
+    #dc2424 100%
+  );
+  background-size: 200% auto;
+  color: transparent; /* Matnni yashirish */
+  -webkit-background-clip: text; /* Safari va Chrome uchun */
+  background-clip: text;
+  transition: 0.5s;
+}
+
+.textGrad:hover {
+  background-position: right center;
+}
+
+.right {
+  width: 50%;
+}
