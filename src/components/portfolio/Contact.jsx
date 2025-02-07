@@ -54,7 +54,7 @@ function Contact() {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control border border-black"
               id="exampleInputName"
               aria-describedby="nameHelp"
             />
@@ -68,7 +68,7 @@ function Contact() {
             </label>
             <input
               type="email"
-              className="form-control"
+              className="form-control border border-black"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
@@ -82,7 +82,7 @@ function Contact() {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control border border-black"
               id="exampleInputMessage"
               aria-describedby="messageHelp"
             />

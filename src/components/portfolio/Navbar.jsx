@@ -5,7 +5,7 @@ function Navbar() {
     <div className="d-flex flex-column flex-md-row align-items-center p-2 border-bottom m-0">
       <Link
         to="/"
-        className="d-flex align-items-center link-body-emphasis text-decoration-none"
+        className="d-flex align-items-center link-body-emphasis text-decoration-none "
       >
         Portfolio
       </Link>

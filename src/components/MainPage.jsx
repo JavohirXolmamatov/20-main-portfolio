@@ -4,7 +4,7 @@ import { Footer, Navbar } from "../components/index";
 
 function MainPage() {
   return (
-    <div className="">
+    <div className="" style={{ userSelect: "none" }}>
       <header className="container">
         <Navbar />
       </header>
