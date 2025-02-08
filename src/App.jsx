@@ -11,8 +11,12 @@ import {
   MainBlogPage,
   Skills,
 } from "./components/index";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
+  // Foydalanuvchi login qilgan yoki qilmaganligini tekshirish
+  const isAuthenticated = true; // True bo‘lsa, dashboard ochiladi
+
   const routes = createBrowserRouter([
     {
       path: "/",
@@ -20,7 +24,7 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         {
-          path: "",
+          index: true,
           element: <Home />,
         },
         {
@@ -36,8 +40,14 @@ function App() {
           element: <Skills />,
         },
         {
-          path: "blogs",
-          element: <MainBlogPage />,
+          path: "/blogs",
+          element: <ProtectedRoute isAuth={isAuthenticated} />, // himoyalangan yo'l
+          children: [
+            {
+              index: true,
+              element: <MainBlogPage />,
+            },
+          ],
         },
         {
           path: "/contact",
