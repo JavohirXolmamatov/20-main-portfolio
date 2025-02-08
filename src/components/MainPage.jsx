@@ -5,13 +5,13 @@ import { Footer, Navbar } from "../components/index";
 function MainPage() {
   return (
     <div className="" style={{ userSelect: "none" }}>
-      <header className="container">
+      <header className="">
         <Navbar />
       </header>
-      <main className="container">
+      <main className="">
         <Outlet />
       </main>
-      <footer className="container">
+      <footer className="bg-dark text-white">
         <Footer />
       </footer>
     </div>
