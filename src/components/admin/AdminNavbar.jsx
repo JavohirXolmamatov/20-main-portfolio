@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function AdminNavbar() {
   return (
     <div className="d-flex flex-column flex-md-row align-items-center p-2 border-bottom m-0">
       <Link
@@ -19,24 +19,6 @@ function Navbar() {
         </Link>
         <Link
           className="me-4 py-2 link-body-emphasis text-decoration-none"
-          to={"/about"}
-        >
-          About
-        </Link>
-        <Link
-          className="me-4 py-2 link-body-emphasis text-decoration-none"
-          to={"/portfolio"}
-        >
-          Portfolio
-        </Link>
-        <Link
-          className="me-4 py-2 link-body-emphasis text-decoration-none"
-          to={"/skills"}
-        >
-          Skills
-        </Link>
-        <Link
-          className="me-4 py-2 link-body-emphasis text-decoration-none"
           to={"/blogs"}
         >
           Blog
@@ -47,15 +29,12 @@ function Navbar() {
         >
           Contact
         </Link>
-        <Link
-          className="py-2 link-body-emphasis text-decoration-none"
-          to={"/login"}
-        >
-          Admin
+        <Link className="py-2 link-body-emphasis text-decoration-none" to={"/"}>
+          Chiqish
         </Link>
       </nav>
     </div>
   );
 }
 
-export default Navbar;
+export default AdminNavbar;

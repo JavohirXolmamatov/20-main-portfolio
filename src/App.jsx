@@ -10,12 +10,15 @@ import {
   Contact,
   MainBlogPage,
   Skills,
+  Admin,
+  AdminLogin,
+  ProjectsService,
 } from "./components/index";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   // Foydalanuvchi login qilgan yoki qilmaganligini tekshirish
-  const isAuthenticated = true; // True bo‘lsa, dashboard ochiladi
+  const isAuthenticated = false; // True bo‘lsa, dashboard ochiladi
 
   const routes = createBrowserRouter([
     {
@@ -41,17 +44,29 @@ function App() {
         },
         {
           path: "/blogs",
-          element: <ProtectedRoute isAuth={isAuthenticated} />, // himoyalangan yo'l
-          children: [
-            {
-              index: true,
-              element: <MainBlogPage />,
-            },
-          ],
+          element: <MainBlogPage />,
         },
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/login",
+          element: <AdminLogin />,
+        },
+        {
+          path: "/admin",
+          element: <ProtectedRoute isAuth={isAuthenticated} />, // himoyalangan yo'l
+          children: [
+            {
+              index: true,
+              element: <Admin />,
+            },
+            {
+              path: "/admin/projectservice",
+              element: "ProjectsService",
+            },
+          ],
         },
       ],
     },
