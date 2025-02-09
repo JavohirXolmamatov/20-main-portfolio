@@ -2,7 +2,10 @@ import styles from "./Contact.module.css";
 import classNames from "classnames";
 function Contact() {
   return (
-    <div className={styles.contact}>
+    <div
+      className="d-flex container justify-content-center align-items-center "
+      style={{ height: "92.2vh" }}
+    >
       <div className={styles.left}>
         <h1 className={classNames(styles.textGrad, styles.h1)}>
           Do you have a project to discuss?{" "}
@@ -12,17 +15,17 @@ function Contact() {
         </h2>
         <div className="d-flex mt-5 justify-content-between">
           <div className="">
-            <h3 className="text-uppercase">contact</h3>
+            <h3 className="text-uppercase fs-5 fw-bold">contact</h3>
             <a
               href="mailto:xolmamatovjavohir390@gmail.com?subject=Savol&body=Salom, sizga bir savolim bor..."
-              className={styles.a}
+              className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
             >
               Emailga yozish uchun ....
             </a>
           </div>
           <div>
-            <h3 className="text-uppercase">Social media</h3>
-            <div className="d-flex flex-row  justify-content-evenly">
+            <h3 className="text-uppercase fs-5 fw-bold">Social media</h3>
+            <div className="d-flex flex-row  justify-content-evenly ">
               <a href="#" className={styles.a}>
                 <i className="bi bi-linkedin"></i>
               </a>

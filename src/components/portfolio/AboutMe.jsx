@@ -3,11 +3,14 @@ import classNames from "classnames";
 
 function AboutMe() {
   return (
-    <div className="d-flex row align-items-center" style={{ height: "82vh" }}>
-      <div className="col-4">
+    <div
+      className="d-flex row align-items-center container w-100"
+      style={{ height: "92.2vh" }}
+    >
+      <div className="col-5">
         <img src="#" alt="#" />
       </div>
-      <div className="col-8">
+      <div className="col-7">
         <h3 className="mb-4 fw-bold">
           I'm Javohir Xolmamatov and{" "}
           <span className="text-danger">Developer</span>
@@ -15,11 +18,10 @@ function AboutMe() {
         <p className="mb-4 lh-lg fw-semibold ">
           Hi! My name is <span className="text-danger">Javohir Xolmamatov</span>
           . I am a Web developer, and I'm very passionate and dedicated to my
-          work. With 20 years experience as a profissional Web developer. I have
-          acquired the skills and knowledge neseccary to make your project a
-          success.
+          work. I have acquired the skills and knowledge neseccary to make your
+          project a success.
         </p>
-        <div className="row fw-bold">
+        <div className="row fw-bold mt-5">
           <p className="col-6">
             <i className="bi bi-gift text-danger"></i> Birthday:{" "}
             <span className="text-body-secondary">02.03.2002</span>
@@ -65,11 +67,11 @@ function AboutMe() {
             Phone: <span className="text-body-secondary">+99894 988 04 77</span>
           </p>
         </div>
-        <button className={styles.btnGrad}>
+        {/* <button className={styles.btnGrad}>
           Download CV {""}
           {""}
           <i className="bi bi-download text-white"></i>
-        </button>
+        </button> */}
       </div>
     </div>
   );

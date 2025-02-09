@@ -12,14 +12,10 @@ import {
   Skills,
   Admin,
   AdminLogin,
-  ProjectsService,
 } from "./components/index";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
-  // Foydalanuvchi login qilgan yoki qilmaganligini tekshirish
-  const isAuthenticated = false; // True bo‘lsa, dashboard ochiladi
-
   const routes = createBrowserRouter([
     {
       path: "/",
@@ -56,7 +52,7 @@ function App() {
         },
         {
           path: "/admin",
-          element: <ProtectedRoute isAuth={isAuthenticated} />, // himoyalangan yo'l
+          element: <ProtectedRoute />, // himoyalangan yo'l
           children: [
             {
               index: true,

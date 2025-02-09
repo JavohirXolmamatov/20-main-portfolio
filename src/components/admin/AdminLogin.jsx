@@ -1,24 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../../firebase/config";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 function AdminLogin() {
   const navigate = useNavigate();
-  const hundleLogin = (e) => {
-    e.preventDefault();
-    navigate("/admin");
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const userLogin = async (e) => {
+    e.preventDefault(); // Forma submit bo‘lishini oldini olish
+    try {
+      await signInWithEmailAndPassword(getAuth(), email, password);
+      // alert("Login is successful");
+      navigate("/admin"); // Faqat login muvaffaqiyatli bo‘lsa, admin sahifasiga o'tish
+    } catch (error) {
+      alert(error.message);
+    }
   };
   return (
     <main
-      className="form-signin m-auto d-flex justify-content-center align-items-center"
-      style={{ height: "82vh", width: "20%" }}
+      className="form-signin m-auto d-flex justify-content-center align-items-center w-100"
+      style={{ height: "92.2vh" }}
     >
-      <form className="w-100">
+      <form className="w-20">
         <h1 className="h3 mb-3 fw-normal">Please login in</h1>
         <div className="form-floating mb-3">
           <input
             type="email"
-            className="form-control"
+            className="form-control m-1"
             id="floatingInput"
             placeholder="name@example.com"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
           <label htmlFor="floatingInput">Email address</label>
         </div>
@@ -28,6 +43,9 @@ function AdminLogin() {
             className="form-control "
             id="floatingPassword"
             placeholder="Password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
           <label htmlFor="floatingPassword">Password</label>
         </div>
@@ -35,7 +53,7 @@ function AdminLogin() {
           className="btn btn-primary w-100 py-2"
           type="submit"
           onClick={(e) => {
-            hundleLogin(e);
+            userLogin(e);
           }}
         >
           Login

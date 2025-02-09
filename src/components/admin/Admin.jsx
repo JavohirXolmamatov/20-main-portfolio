@@ -1,9 +1,12 @@
+import AdminNavbar from "./AdminNavbar";
+
 function Admin() {
   return (
-    <div>
-      <div></div>
-      <div></div>
-    </div>
+    <>
+      <header>
+        <AdminNavbar />
+      </header>
+    </>
   );
 }
 

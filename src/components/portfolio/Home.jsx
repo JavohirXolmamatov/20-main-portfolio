@@ -16,7 +16,7 @@ function Home() {
     //   <div className="right"></div>
     // </>
 
-    <section className="home-section" id="home" style={{ height: "93vh" }}>
+    <section className="home-section" id="home" style={{ height: "92.2vh" }}>
       <div className="container">
         <div className="home-body">
           <h1 className="fw-semibold mb-4 mt-3">I AM JAVOHIR XOLMAMATOV</h1>

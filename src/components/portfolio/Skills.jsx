@@ -14,16 +14,16 @@ import tailwind from "../../assets/Tailwind_CSS_Logo.svg";
 function Skills() {
   return (
     <div
-      className={styles.skills}
-      style={{ textAlign: "center", paddingTop: "80px" }}
+      className="d-flex flex-column justify-content-center"
+      style={{ textAlign: "center", paddingTop: "80px", height: "92.2vh" }}
     >
       <h1 className={classNames(styles.h1, styles.textGrad)}>Skills</h1>
       <h2 className={classNames()}>
         The skills, tools and technologies I use:
       </h2>
       <div
-        className="d-flex flex-wrap gap-3 w-50 justify-content-center pt-4"
-        style={{ margin: "0 auto" }}
+        className="d-flex flex-wrap gap-3 justify-content-center pt-4"
+        style={{ margin: "0 auto", width: "45%" }}
       >
         <div className="p-2 ">
           <img
