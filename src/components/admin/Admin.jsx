@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import AdminNavbar from "./AdminNavbar";
 
 function Admin() {
@@ -6,6 +7,12 @@ function Admin() {
       <header>
         <AdminNavbar />
       </header>
+      <main
+        className="container pt-3 d-flex justify-content-center align-items-center"
+        style={{ height: "84.3vh" }}
+      >
+        <Outlet />
+      </main>
     </>
   );
 }

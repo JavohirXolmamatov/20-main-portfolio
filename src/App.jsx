@@ -12,6 +12,7 @@ import {
   Skills,
   Admin,
   AdminLogin,
+  ProjectsService,
 } from "./components/index";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -55,12 +56,14 @@ function App() {
           element: <ProtectedRoute />, // himoyalangan yo'l
           children: [
             {
-              index: true,
+              path: "",
               element: <Admin />,
-            },
-            {
-              path: "/admin/projectservice",
-              element: "ProjectsService",
+              children: [
+                {
+                  path: "/admin/projectservice",
+                  element: <ProjectsService />,
+                },
+              ],
             },
           ],
         },
