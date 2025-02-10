@@ -13,6 +13,7 @@ import {
   Admin,
   AdminLogin,
   ProjectsService,
+  Projects,
 } from "./components/index";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -60,8 +61,8 @@ function App() {
               element: <Admin />,
               children: [
                 {
-                  path: "/admin/projectservice",
-                  element: <ProjectsService />,
+                  path: "/admin/projects",
+                  element: <Projects />,
                 },
               ],
             },

@@ -41,9 +41,9 @@ function AdminNavbar() {
         </Link>
         <Link
           className="me-4 py-2 link-body-emphasis text-decoration-none"
-          to={"/admin/projectservice"}
+          to={"/admin/projects"}
         >
-          Project service
+          Projects
         </Link>
         <Link
           className="me-5 py-2 link-body-emphasis text-decoration-none"

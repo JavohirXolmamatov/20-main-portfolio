@@ -11,3 +11,4 @@ export { default as Skills } from "./portfolio/Skills.jsx";
 export { default as Admin } from "./admin/Admin.jsx";
 export { default as AdminLogin } from "./admin/AdminLogin.jsx";
 export { default as ProjectsService } from "./admin/ProjectsService.jsx";
+export { default as Projects } from "./admin/Projects.jsx";
