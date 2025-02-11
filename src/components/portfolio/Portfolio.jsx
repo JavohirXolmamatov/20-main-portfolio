@@ -1,23 +1,31 @@
-import styles from "./Portfolio.module.css";
-import classNames from "classnames";
-import SinglePortfolioCard from "./SinglePortfolioCard";
-import { useState } from "react";
-import react from "../../assets/react.svg";
+import { useEffect, useState } from "react";
+import { collection, onSnapshot } from "firebase/firestore";
+import { db } from "../../firebase/config";
+import ProjectsService from "../admin/ProjectsService";
+import Loader from "../Loader";
 
 function Portfolio() {
-  const [title, setTitle] = useState("Title");
-  const [img, setImg] = useState("react");
-  console.log(react);
+  const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Loader uchun state
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, "projects"), (snapshot) => {
+      const projectsData = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProjects(projectsData);
+      setIsLoading(false); // Ma'lumot kelgandan keyin loaderni o‘chiramiz
+    });
+
+    return () => unsubscribe(); // Komponent o‘chirilganda listenerni to‘xtatamiz
+  }, []);
 
   return (
-    <div className="album py-5 bg-body-tertiary">
-      <div className="container">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <SinglePortfolioCard text={title} img={img} />
-          <SinglePortfolioCard text={title} img={img} />
-          <SinglePortfolioCard text={title} img={img} />
-        </div>
-      </div>
+    <div className="container mt-5 mb-5" style={{ minHeight: "100vh" }}>
+      <h1 className="pt-5 text-center fw-bold">Projects</h1>
+
+      {isLoading ? <Loader /> : <ProjectsService projects={projects} />}
     </div>
   );
 }

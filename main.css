@@ -1,17 +1,5 @@
-body {
-  margin: 0 auto;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
 .header-section {
   top: 0;
-}
-
-main {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 .home-section {
@@ -20,10 +8,6 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.row {
-  margin: 0;
 }
 
 li,
@@ -168,63 +152,7 @@ span {
     text-align: center;
     padding-bottom: 20px;
   }
-  /* skills section style start */
-  .skills-section .skills-part .col-lg-6 {
-    margin-top: 0;
-  }
-  .skills-section .skills-part .item .item-text {
-    display: flex;
-    justify-content: space-between;
-  }
-  .skills-section .skills-part .item .item-text span {
-    color: #000000;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-  .skills-section .skills-part .item .item-text .w-90 {
-    width: 10%;
-  }
-  .skills-section .skills-part .item .item-text .w-80 {
-    width: 20%;
-  }
-  .skills-section .skills-part .item .item-text .w-60 {
-    width: 40%;
-  }
-  .skills-section .skills-part .item .item-text .w-70 {
-    width: 30%;
-  }
-  .skills-section .skills-part .item .progress .w-90 {
-    width: 90%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-80 {
-    width: 80%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-60 {
-    width: 60%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-70 {
-    width: 70%;
-    background-color: #007bff;
-  }
-  /* contact section style start */
-  .contact-section .xsmall-none {
-    display: none;
-  }
-  /* footer section style start */
-}
-/* Landspace devices */
-@media (min-width: 576px) and (max-width: 767.8px) {
-  .container {
-    max-width: 700px;
-  }
-  main {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
+
   /* Header section styles start */
   .header-section {
     position: fixed;
@@ -328,52 +256,6 @@ span {
     width: 90%; /* Tugma kengligini o'rnating, kerakli miqdor */
     text-align: center; /* Tugma markazda bo'lishi uchun */
   }
-  /* skills section style start */
-  .skills-section .skills-part .col-lg-6 {
-    margin-top: 0;
-  }
-  .skills-section .skills-part .item .item-text {
-    display: flex;
-    justify-content: space-between;
-  }
-  .skills-section .skills-part .item .item-text span {
-    color: #000000;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-  .skills-section .skills-part .item .item-text .w-90 {
-    width: 10%;
-  }
-  .skills-section .skills-part .item .item-text .w-80 {
-    width: 20%;
-  }
-  .skills-section .skills-part .item .item-text .w-60 {
-    width: 40%;
-  }
-  .skills-section .skills-part .item .item-text .w-70 {
-    width: 30%;
-  }
-  .skills-section .skills-part .item .progress .w-90 {
-    width: 90%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-80 {
-    width: 80%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-60 {
-    width: 60%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-70 {
-    width: 70%;
-    background-color: #007bff;
-  }
-  /* contact section style start */
-  .contact-section .xsmall-none {
-    display: none;
-  }
-  /* footer section style start */
 }
 @media (min-width: 768px) and (max-width: 991.8px) {
   .container {
@@ -482,52 +364,6 @@ span {
     width: 90%; /* Tugma kengligini o'rnating, kerakli miqdor */
     text-align: center; /* Tugma markazda bo'lishi uchun */
   }
-  /* skills section style start */
-  .skills-section .skills-part .col-lg-6 {
-    margin-top: 0;
-  }
-  .skills-section .skills-part .item .item-text {
-    display: flex;
-    justify-content: space-between;
-  }
-  .skills-section .skills-part .item .item-text span {
-    color: #000000;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-  .skills-section .skills-part .item .item-text .w-90 {
-    width: 10%;
-  }
-  .skills-section .skills-part .item .item-text .w-80 {
-    width: 20%;
-  }
-  .skills-section .skills-part .item .item-text .w-60 {
-    width: 40%;
-  }
-  .skills-section .skills-part .item .item-text .w-70 {
-    width: 30%;
-  }
-  .skills-section .skills-part .item .progress .w-90 {
-    width: 90%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-80 {
-    width: 80%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-60 {
-    width: 60%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-70 {
-    width: 70%;
-    background-color: #007bff;
-  }
-  /* contact section style start */
-  .contact-section .xsmall-none {
-    display: none;
-  }
-  /* footer section style start */
 }
 @media (min-width: 992px) {
   /* Header section styles start */
@@ -656,80 +492,6 @@ span {
     width: 40%; /* Tugma kengligi */
     left: 0;
     right: 0;
-  }
-  /* skills section style */
-  .skills-section .skills-part .col-lg-6 {
-    margin-top: 0;
-  }
-  .skills-section .skills-part .item .item-text {
-    display: flex;
-    justify-content: space-between;
-  }
-  .skills-section .skills-part .item .item-text span {
-    color: #000000;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-  .skills-section .skills-part .item .item-text .w-90 {
-    width: 10%;
-  }
-  .skills-section .skills-part .item .item-text .w-80 {
-    width: 20%;
-  }
-  .skills-section .skills-part .item .item-text .w-60 {
-    width: 40%;
-  }
-  .skills-section .skills-part .item .item-text .w-70 {
-    width: 30%;
-  }
-  .skills-section .skills-part .item .progress .w-90 {
-    width: 90%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-80 {
-    width: 80%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-60 {
-    width: 60%;
-    background-color: #007bff;
-  }
-  .skills-section .skills-part .item .progress .w-70 {
-    width: 70%;
-    background-color: #007bff;
-  }
-  /* contact section style */
-  .contact-section {
-    padding-top: 80px;
-    background-color: #f5f5f5;
-  }
-  .contact-section .row {
-    text-align: center;
-  }
-  .contact-section .row form {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .contact-section .row form label {
-    float: left;
-  }
-  .contact-section .row form .btn1 {
-    border: 0;
-  }
-  /* footer section style */
-  .footer-section {
-    background-color: #343a40;
-  }
-  .footer-section .container {
-    margin-top: 0 !important;
-  }
-  .footer-section .icon a {
-    margin: 0 10px; /* Har ikki tomonida 10px bo'shliq */
-    color: white; /* Ijtimoiy tarmoqlar ikonkalari rangini oq qilib belgilash */
-  }
-  .footer-section .icon a:hover {
-    color: #dc3545;
-    transition: 0.5s ease;
   }
 }
 

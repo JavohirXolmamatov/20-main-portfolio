@@ -7,10 +7,7 @@ function Admin() {
       <header>
         <AdminNavbar />
       </header>
-      <main
-        className="container pt-3 d-flex justify-content-center align-items-center w-100"
-        style={{ height: "84.3vh" }}
-      >
+      <main className="container" style={{}}>
         <Outlet />
       </main>
     </>

@@ -2,23 +2,29 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../firebase/config";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import Loader from "../Loader";
 function AdminLogin() {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const userLogin = async (e) => {
     e.preventDefault(); // Forma submit bo‘lishini oldini olish
+    setIsLoading(true);
     try {
       await signInWithEmailAndPassword(getAuth(), email, password);
-      // alert("Login is successful");
       navigate("/admin"); // Faqat login muvaffaqiyatli bo‘lsa, admin sahifasiga o'tish
+      setIsLoading(false);
     } catch (error) {
       alert(error.message);
+      setIsLoading(false);
     }
   };
-  return (
+  return isLoading ? (
+    <Loader />
+  ) : (
     <main
       className="form-signin m-auto d-flex justify-content-center align-items-center w-100"
       style={{ height: "92.2vh" }}

@@ -3,7 +3,7 @@ import { db } from "../firebase/config";
 import { useState } from "react";
 import Input from "../components/Input";
 
-function AddProject() {
+function AddProject({ setIsProjectAdd }) {
   const [projectName, setProjectName] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -29,7 +29,7 @@ function AddProject() {
         createdAt: serverTimestamp(), // ✅ Firebase timestamp ishlatamiz
       });
 
-      console.log("Document written with ID: ", docRef.id);
+      setIsProjectAdd(false);
 
       // 🔄 Formni tozalaymiz
       setProjectName("");
@@ -43,7 +43,7 @@ function AddProject() {
   };
 
   return (
-    <div className="w-100">
+    <div className="w-100" style={{ height: "78vh" }}>
       <h2 className="mb-5 text center ">Add new project</h2>
       <form onSubmit={addProject} className="w-100 text-center">
         <Input
@@ -83,7 +83,7 @@ function AddProject() {
         />
 
         <button type="submit" className="btn btn-success">
-          Add project
+          Save project
         </button>
       </form>
     </div>
