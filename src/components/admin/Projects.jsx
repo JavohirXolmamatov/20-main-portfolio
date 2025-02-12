@@ -48,7 +48,11 @@ function Projects() {
       ) : isLoading ? (
         <Loader />
       ) : (
-        <ProjectsService projects={projects} isAdmin={isAdmin} />
+        <ProjectsService
+          projects={projects}
+          isAdmin={isAdmin}
+          setProjects={setProjects}
+        />
       )}
 
       <div className="w-100 text-center p-4">
