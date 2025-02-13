@@ -7,7 +7,7 @@ function Admin() {
       <header>
         <AdminNavbar />
       </header>
-      <main className="container" style={{}}>
+      <main className="">
         <Outlet />
       </main>
     </>

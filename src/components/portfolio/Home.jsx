@@ -1,21 +1,14 @@
-import styles from "./Home.module.css";
-import classNames from "classnames";
 function Home() {
-  return (
-    // <>
-    //   <div className={styles.left}>
-    //     <h1 className={classNames(styles.h1, styles.textGrad)}>
-    //       FRONTEND DEVELOPER
-    //     </h1>
-    //     <h4 className="h4">
-    //       I am Javohir - <span>web-developer</span> width a passion for creating
-    //       beautiful and responsive websites
-    //     </h4>
-    //     <button className={styles.btnGrad}>VIEW MY WORK</button>
-    //   </div>
-    //   <div className="right"></div>
-    // </>
+  const DownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/MyResume.pdf"; // `public` papkasidagi faylga to‘g‘ri yo‘l
+    link.download = "MyResume.pdf"; // Yuklab olinadigan fayl nomi
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
+  return (
     <section className="home-section" id="home" style={{ height: "92.2vh" }}>
       <div className="container">
         <div className="home-body">
@@ -28,7 +21,7 @@ function Home() {
           </p>
           <div className="button">
             <br />
-            <button id="download-btn" className="btn1">
+            <button id="download-btn" className="btn1" onClick={DownloadResume}>
               Download Resume
             </button>
           </div>

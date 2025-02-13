@@ -8,12 +8,11 @@ import {
   AboutMe,
   Portfolio,
   Contact,
-  MainBlogPage,
   Skills,
   Admin,
   AdminLogin,
-  ProjectsService,
   Projects,
+  AdminHome,
 } from "./components/index";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -41,10 +40,6 @@ function App() {
           element: <Skills />,
         },
         {
-          path: "/blogs",
-          element: <MainBlogPage />,
-        },
-        {
           path: "/contact",
           element: <Contact />,
         },
@@ -60,6 +55,10 @@ function App() {
               path: "",
               element: <Admin />,
               children: [
+                {
+                  index: true,
+                  element: <AdminHome />,
+                },
                 {
                   path: "/admin/projects",
                   element: <Projects />,

@@ -35,12 +35,6 @@ function AdminNavbar() {
         </Link>
         <Link
           className="me-4 py-2 link-body-emphasis text-decoration-none"
-          to={"/admin/blogs"}
-        >
-          Blog service
-        </Link>
-        <Link
-          className="me-4 py-2 link-body-emphasis text-decoration-none"
           to={"/admin/projects"}
         >
           Projects

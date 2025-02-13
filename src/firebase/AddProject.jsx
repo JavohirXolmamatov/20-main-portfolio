@@ -5,7 +5,8 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
-import { db } from "../firebase/config";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { db, storage } from "../firebase/config"; // storage ni import qilish kerak
 import { useState } from "react";
 import Input from "../components/Input";
 
@@ -23,6 +24,19 @@ function AddProject({ setIsProjectAdd, existingProject }) {
   );
 
   const isEditing = !!existingProject;
+  const handleFileUpload = async (file) => {
+    if (!file) return;
+
+    const fileRef = ref(storage, `projects/${file.name}`); // Firebase Storage ichida `projects` papkasiga saqlaymiz
+
+    try {
+      await uploadBytes(fileRef, file); // Rasmni yuklash
+      const url = await getDownloadURL(fileRef); // Yuklangan rasm URL’sini olish
+      setImagesLink(url); // State-ga saqlash
+    } catch (error) {
+      console.error("Rasm yuklashda xatolik:", error);
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,6 +75,7 @@ function AddProject({ setIsProjectAdd, existingProject }) {
       setDescription("");
       setBody("");
       setImagesLink("");
+      console.log("Rasm linki:", imagesLink);
     } catch (e) {
       console.error("Error saving document: ", e);
     }
@@ -100,13 +115,17 @@ function AddProject({ setIsProjectAdd, existingProject }) {
           id="body"
           placeholder="Body"
         />
-        <Input
-          type="text"
-          state={imagesLink}
-          setState={setImagesLink}
-          id="imagesLink"
-          placeholder="Images Link"
+
+        {/* Rasmlar yuklash qismi */}
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => handleFileUpload(e.target.files[0])} // Faylni Firebase Storage’ga yuklaydi
         />
+
+        {/* Agar rasm yuklangan bo'lsa, ko‘rsatish */}
+        {imagesLink && <img src={imagesLink} alt="Uploaded" width="100" />}
+
         <button type="submit" className="btn btn-success">
           {isEditing ? "Update Project" : "Save Project"}
         </button>

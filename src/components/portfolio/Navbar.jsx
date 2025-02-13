@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../../firebase/config";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -47,9 +47,9 @@ function Navbar() {
           <nav>
             <ul className="sidebar">
               <li className="first-item" onClick={hideSidebar}>
-                <NavLink to="/">
+                <button className="btn btn-danger">
                   <i className="bi bi-x-lg"></i>
-                </NavLink>
+                </button>
               </li>
               <li>
                 <NavLink to="/">Home</NavLink>
@@ -58,7 +58,7 @@ function Navbar() {
                 <NavLink to="/about">About</NavLink>
               </li>
               <li>
-                <NavLink to="/portfolio">My-projects</NavLink>
+                <NavLink to="/portfolio">Projects</NavLink>
               </li>
               <li>
                 <NavLink to="/skills">Skills</NavLink>
@@ -86,7 +86,7 @@ function Navbar() {
                 <NavLink to="/about">About</NavLink>
               </li>
               <li className="hideOnMobile">
-                <NavLink to="/portfolio">My-projects</NavLink>
+                <NavLink to="/portfolio">Projects</NavLink>
               </li>
               <li className="hideOnMobile">
                 <NavLink to="/skills">Skills</NavLink>
@@ -98,9 +98,9 @@ function Navbar() {
                 <NavLink to="/login">Admin</NavLink>
               </li>
               <li className="menu menu-button" onClick={showSidebar}>
-                <NavLink to="/">
+                <button className="btn btn-success">
                   <i className="bi bi-list"></i>
-                </NavLink>
+                </button>
               </li>
             </ul>
           </nav>

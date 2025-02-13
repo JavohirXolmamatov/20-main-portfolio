@@ -42,7 +42,7 @@ function Projects() {
   };
 
   return (
-    <div className="">
+    <div className="container">
       {isProjectAdd ? (
         <AddProject setIsProjectAdd={setIsProjectAdd} />
       ) : isLoading ? (
