@@ -5,8 +5,7 @@ import {
   doc,
   updateDoc,
 } from "firebase/firestore";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { db, storage } from "../firebase/config"; // storage ni import qilish kerak
+import { db } from "../firebase/config";
 import { useState } from "react";
 import Input from "../components/Input";
 
@@ -22,26 +21,23 @@ function AddProject({ setIsProjectAdd, existingProject }) {
   const [imagesLink, setImagesLink] = useState(
     existingProject?.imagesLink || ""
   );
+  const [projectLink, setProjectLink] = useState(
+    existingProject?.projectLink || ""
+  );
 
   const isEditing = !!existingProject;
-  const handleFileUpload = async (file) => {
-    if (!file) return;
-
-    const fileRef = ref(storage, `projects/${file.name}`); // Firebase Storage ichida `projects` papkasiga saqlaymiz
-
-    try {
-      await uploadBytes(fileRef, file); // Rasmni yuklash
-      const url = await getDownloadURL(fileRef); // Yuklangan rasm URL’sini olish
-      setImagesLink(url); // State-ga saqlash
-    } catch (error) {
-      console.error("Rasm yuklashda xatolik:", error);
-    }
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!projectName || !title || !description || !body || !imagesLink) {
+    if (
+      !projectName ||
+      !title ||
+      !description ||
+      !body ||
+      !imagesLink ||
+      !projectLink
+    ) {
       alert("Iltimos, barcha maydonlarni to‘ldiring!");
       return;
     }
@@ -56,6 +52,7 @@ function AddProject({ setIsProjectAdd, existingProject }) {
           description,
           body,
           imagesLink,
+          projectLink,
         });
       } else {
         // Yangi qo'shish
@@ -65,6 +62,7 @@ function AddProject({ setIsProjectAdd, existingProject }) {
           description,
           body,
           imagesLink,
+          projectLink,
           createdAt: serverTimestamp(),
         });
       }
@@ -75,14 +73,14 @@ function AddProject({ setIsProjectAdd, existingProject }) {
       setDescription("");
       setBody("");
       setImagesLink("");
-      console.log("Rasm linki:", imagesLink);
+      setProjectLink("");
     } catch (e) {
       console.error("Error saving document: ", e);
     }
   };
 
   return (
-    <div className="w-100" style={{ height: "78vh" }}>
+    <div className="w-100" style={{ minHeight: "78vh" }}>
       <h2 className="mb-5 text-center ">
         {isEditing ? "Edit Project" : "Add New Project"}
       </h2>
@@ -116,15 +114,33 @@ function AddProject({ setIsProjectAdd, existingProject }) {
           placeholder="Body"
         />
 
-        {/* Rasmlar yuklash qismi */}
-        <input
-          type="file"
-          accept="image/*"
-          onChange={(e) => handleFileUpload(e.target.files[0])} // Faylni Firebase Storage’ga yuklaydi
+        {/* Rasm linkini qo‘shish */}
+        <Input
+          type="text"
+          state={imagesLink}
+          setState={setImagesLink}
+          id="imagesLink"
+          placeholder="Image URL"
         />
 
-        {/* Agar rasm yuklangan bo'lsa, ko‘rsatish */}
-        {imagesLink && <img src={imagesLink} alt="Uploaded" width="100" />}
+        <Input
+          type="text"
+          state={projectLink}
+          setState={setProjectLink}
+          id="projectLink"
+          placeholder="Project URL"
+        />
+
+        {/* Agar rasm linki mavjud bo‘lsa, uni ko‘rsatish */}
+        {imagesLink && (
+          <img
+            src={imagesLink}
+            alt="Uploaded"
+            width="100"
+            height="150"
+            style={{ display: "block", margin: "auto", paddingBottom: "10px" }}
+          />
+        )}
 
         <button type="submit" className="btn btn-success">
           {isEditing ? "Update Project" : "Save Project"}

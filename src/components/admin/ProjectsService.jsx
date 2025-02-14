@@ -21,21 +21,13 @@ function ProjectsService({ projects, setProjects, isAdmin }) {
           {projects.map((project) => (
             <div key={project.id} className="col" style={{ height: "30rem" }}>
               <div className="card shadow-sm h-100">
-                <svg
+                <img
+                  src={project.imagesLink}
+                  alt={project.imagesLink}
                   className="bd-placeholder-img card-img-top w-100"
-                  style={{ height: "15rem" }}
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#55595c"></rect>
-                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                    Thumbnail
-                  </text>
-                </svg>
+                  style={{ height: "15rem", objectFit: "cover" }}
+                />
+
                 <div
                   className="card-body d-flex flex-column"
                   style={{ height: "15rem" }}
@@ -49,7 +41,13 @@ function ProjectsService({ projects, setProjects, isAdmin }) {
                   </div>
                   <div className="d-flex justify-content-between align-items-center mt-auto">
                     <div className="btn-group">
-                      <button type="button" className="btn btn-success btn-sm">
+                      <button
+                        type="button"
+                        className="btn btn-success btn-sm"
+                        onClick={() =>
+                          window.open(project.projectLink, "_blank")
+                        }
+                      >
                         View
                       </button>
                       {isAdmin && (
