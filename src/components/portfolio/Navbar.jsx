@@ -42,127 +42,65 @@ function Navbar() {
 
   return (
     !isAuth && (
-      <header className="header-section">
-        <div className="container">
-          <nav>
-            <ul className="sidebar">
-              <li className="first-item" onClick={hideSidebar}>
-                <button className="btn btn-danger">
-                  <i className="bi bi-x-lg"></i>
-                </button>
-              </li>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/portfolio">Projects</NavLink>
-              </li>
-              <li>
-                <NavLink to="/skills">Skills</NavLink>
-              </li>
-              <li>
-                <NavLink to="/blogs">Blog</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-              <li>
-                <NavLink to="/login">Admin</NavLink>
-              </li>
-            </ul>
-            <ul>
-              <li className="first-item">
-                <NavLink to="/">
-                  <span>Javohir</span>
-                </NavLink>
-              </li>
-              <li className="hideOnMobile">
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li className="hideOnMobile">
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li className="hideOnMobile">
-                <NavLink to="/portfolio">Projects</NavLink>
-              </li>
-              <li className="hideOnMobile">
-                <NavLink to="/skills">Skills</NavLink>
-              </li>
-              <li className="hideOnMobile">
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-              <li className="hideOnMobile">
-                <NavLink to="/login">Admin</NavLink>
-              </li>
-              <li className="menu menu-button" onClick={showSidebar}>
-                <button className="btn btn-success">
-                  <i className="bi bi-list"></i>
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <nav className="w-100 container m-auto">
+        <ul className="sidebar">
+          <li className="first-item" onClick={hideSidebar}>
+            <button className="btn btn-danger">
+              <i className="bi bi-x-lg"></i>
+            </button>
+          </li>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/portfolio">Projects</NavLink>
+          </li>
+          <li>
+            <NavLink to="/skills">Skills</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li>
+            <NavLink to="/login">Admin</NavLink>
+          </li>
+        </ul>
+        <ul>
+          <li className="first-item">
+            <NavLink to="/">
+              <span>Javohir</span>
+            </NavLink>
+          </li>
+          <li className="hideOnMobile">
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li className="hideOnMobile">
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li className="hideOnMobile">
+            <NavLink to="/portfolio">Projects</NavLink>
+          </li>
+          <li className="hideOnMobile">
+            <NavLink to="/skills">Skills</NavLink>
+          </li>
+          <li className="hideOnMobile">
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li className="hideOnMobile">
+            <NavLink to="/login">Admin</NavLink>
+          </li>
+          <li className="menu menu-button" onClick={showSidebar}>
+            <button className="btn btn-success">
+              <i className="bi bi-list"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
     )
   );
-  // return (
-  //   <div className="d-flex flex-column flex-md-row align-items-center p-2 border-bottom m-0">
-  //     <Link
-  //       to="/"
-  //       className="d-flex align-items-center link-body-emphasis text-decoration-none "
-  //     >
-  //       Portfolio
-  //     </Link>
-
-  //     <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-  //       <Link
-  //         className="me-4 py-2 link-body-emphasis text-decoration-none"
-  //         to={"/"}
-  //       >
-  //         Home
-  //       </Link>
-  //       <Link
-  //         className="me-4 py-2 link-body-emphasis text-decoration-none"
-  //         to={"/about"}
-  //       >
-  //         About
-  //       </Link>
-  //       <Link
-  //         className="me-4 py-2 link-body-emphasis text-decoration-none"
-  //         to={"/portfolio"}
-  //       >
-  //         Portfolio
-  //       </Link>
-  //       <Link
-  //         className="me-4 py-2 link-body-emphasis text-decoration-none"
-  //         to={"/skills"}
-  //       >
-  //         Skills
-  //       </Link>
-  //       <Link
-  //         className="me-4 py-2 link-body-emphasis text-decoration-none"
-  //         to={"/blogs"}
-  //       >
-  //         Blog
-  //       </Link>
-  //       <Link
-  //         className="me-5 py-2 link-body-emphasis text-decoration-none"
-  //         to={"/contact"}
-  //       >
-  //         Contact
-  //       </Link>
-  //       <Link
-  //         className="py-2 link-body-emphasis text-decoration-none"
-  //         to={"/login"}
-  //       >
-  //         Admin
-  //       </Link>
-  //     </nav>
-  //   </div>
-  // );
 }
 
 export default Navbar;

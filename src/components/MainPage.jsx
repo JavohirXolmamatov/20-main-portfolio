@@ -5,13 +5,22 @@ import { Footer, Navbar } from "../components/index";
 function MainPage() {
   return (
     <div className="" style={{ userSelect: "none" }}>
-      <header className="">
+      <header
+        className="header-section d-flex fixed-top"
+        style={{ marginBottom: "auto", height: "80px" }}
+      >
         <Navbar />
       </header>
-      <main className="">
+      <main
+        className="d-flex justify-content-center"
+        style={{ position: "absolute", top: "80px" }}
+      >
         <Outlet />
       </main>
-      <footer className="bg-dark text-white">
+      <footer
+        className="bg-dark text-white d-flex justify-content-center"
+        style={{ marginTop: "auto" }}
+      >
         <Footer />
       </footer>
     </div>

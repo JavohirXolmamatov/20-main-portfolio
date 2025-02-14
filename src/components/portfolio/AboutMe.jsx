@@ -4,13 +4,13 @@ import classNames from "classnames";
 function AboutMe() {
   return (
     <div
-      className="d-flex row align-items-center container w-100"
-      style={{ height: "92.2vh" }}
+      className="d-flex row align-items-center container w-100 m-0 p-0 justify-content-center"
+      style={{ height: "100vh", margin: "auto" }}
     >
-      <div className="col-5">
+      <div className="col-lg-5">
         <img src="#" alt="#" />
       </div>
-      <div className="col-7">
+      <div className="col-lg-7">
         <h3 className="mb-4 fw-bold">
           I'm Javohir Xolmamatov and{" "}
           <span className="text-danger">Developer</span>
