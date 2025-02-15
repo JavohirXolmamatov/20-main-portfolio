@@ -1,16 +1,3 @@
-.contact {
-  display: flex;
-  padding-top: 150px;
-  height: 82vh;
-}
-.left {
-  width: 50%;
-  /* height: 90vh; */
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  margin-right: 200px;
-}
 .h1 {
   font-size: 40px;
   font-weight: bolder;
@@ -75,14 +62,6 @@
 
 .textGrad:hover {
   background-position: right center;
-}
-
-.right {
-  width: 50%;
-  /* height: 90vh; */
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
 }
 
 .a {

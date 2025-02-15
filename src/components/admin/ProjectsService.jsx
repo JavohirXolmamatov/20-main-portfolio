@@ -17,7 +17,7 @@ function ProjectsService({ projects, setProjects, isAdmin }) {
       )}
 
       {projects?.length > 0 ? (
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 w-100 p-0 pt-3">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 w-100 p-0 m-0 pt-3">
           {projects.map((project) => (
             <div key={project.id} className="col" style={{ height: "30rem" }}>
               <div className="card shadow-sm h-100">

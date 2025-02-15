@@ -13,75 +13,91 @@ import tailwind from "../../assets/Tailwind_CSS_Logo.svg";
 
 function Skills() {
   return (
-    <div
-      className="d-flex flex-column justify-content-center"
-      style={{ textAlign: "center", paddingTop: "80px", height: "92.2vh" }}
-    >
-      <h1 className={classNames(styles.h1, styles.textGrad)}>Skills</h1>
-      <h2 className={classNames()}>
-        The skills, tools and technologies I use:
-      </h2>
+    <div className="container w-100 h-100">
       <div
-        className="d-flex flex-wrap gap-3 justify-content-center pt-4"
-        style={{ margin: "0 auto", width: "45%" }}
+        className="d-flex flex-column justify-content-center h-100 w-100"
+        style={{ textAlign: "center", overflow: "scroll" }}
       >
-        <div className="p-2 ">
-          <img
-            src={html}
-            alt="html"
-            style={{ width: "4rem", height: "4rem" }}
-          />
-        </div>
-        <div className="p-2 ">
-          <img src={css} alt="css" style={{ width: "4rem", height: "4rem" }} />
-        </div>
-        <div className="p-2 ">
-          <img
-            src={javascript}
-            alt="javascript"
-            style={{ width: "4rem", height: "4rem" }}
-          />
-        </div>
-        <div className="p-2 ">
-          <img
-            src={react}
-            alt="react"
-            style={{ width: "4rem", height: "4rem" }}
-          />
-        </div>
-        <div className="p-2 ">
-          <img
-            src={bootstrap}
-            alt="bootstrap"
-            style={{ width: "4rem", height: "4rem" }}
-          />
-        </div>
-        <div className="p-2 ">
-          <img src={npm} alt="npm" style={{ width: "4rem", height: "4rem" }} />
-        </div>
-        <div className="p-2 ">
-          <img
-            src={figma}
-            alt="figma"
-            style={{ width: "4rem", height: "4rem" }}
-          />
-        </div>
-        <div className="p-2 ">
-          <img src={git} alt="git" style={{ width: "4rem", height: "4rem" }} />
-        </div>
-        <div className="p-2 ">
-          <img
-            src={sass}
-            alt="sass"
-            style={{ width: "4rem", height: "4rem" }}
-          />
-        </div>
-        <div className="p-2 ">
-          <img
-            src={tailwind}
-            alt="tailwind"
-            style={{ width: "4rem", height: "4rem" }}
-          />
+        <h1 className={classNames(styles.h1, styles.textGrad)}>Skills</h1>
+        <h2 className={classNames()}>
+          The skills, tools and technologies I use:
+        </h2>
+        <div
+          className="d-flex flex-wrap gap-3 w-100 justify-content-center pt-4"
+          style={{ margin: "0 auto", width: "45%" }}
+        >
+          <div className="row m-0 p-0 align-items-center justify-content-center g-3">
+            <div className="col-4 ">
+              <img
+                src={html}
+                alt="html"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={css}
+                alt="css"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={javascript}
+                alt="javascript"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={react}
+                alt="react"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={bootstrap}
+                alt="bootstrap"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={npm}
+                alt="npm"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={figma}
+                alt="figma"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={git}
+                alt="git"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={sass}
+                alt="sass"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+            <div className="col-4 ">
+              <img
+                src={tailwind}
+                alt="tailwind"
+                style={{ width: "4rem", height: "4rem" }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

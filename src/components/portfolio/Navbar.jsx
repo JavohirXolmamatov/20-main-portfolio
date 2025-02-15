@@ -68,7 +68,7 @@ function Navbar() {
             <NavLink to="/login">Admin</NavLink>
           </li>
         </ul>
-        <ul>
+        <ul className="p-0">
           <li className="first-item">
             <NavLink to="/">
               <span>Javohir</span>

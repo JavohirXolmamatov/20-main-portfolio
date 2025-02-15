@@ -22,7 +22,15 @@ function Portfolio() {
   }, []);
 
   return (
-    <div className="container mt-5 mb-5" style={{ minHeight: "100vh" }}>
+    <div
+      className="container portfolio h-100 m-0 p-0"
+      style={{
+        overflowY: "scroll",
+        WebkitScrollSnapType: "none",
+        scrollbarWidth: "none", // Firefox uchun
+        msOverflowStyle: "none", // IE va eski Edge uchun
+      }}
+    >
       <h1 className="pt-5 text-center fw-bold">Projects</h1>
 
       {isLoading ? <Loader /> : <ProjectsService projects={projects} />}

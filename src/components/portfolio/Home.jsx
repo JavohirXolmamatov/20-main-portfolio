@@ -9,9 +9,13 @@ function Home() {
   };
 
   return (
-    <section className="home-section" id="home" style={{ height: "92.2vh" }}>
-      <div className="container">
-        <div className="home-body">
+    <section
+      className="home-section d-flex justify-content-center h-100 p-0 m-0 "
+      id="home"
+      style={{}}
+    >
+      <div className=" h-100 w-100 m-0 p-0 ">
+        <div className="home-body  h-100 w-100  m-0 d-flex justify-content-center flex-column  overflow-auto container m-auto">
           <h1 className="fw-semibold mb-4 mt-3">I AM JAVOHIR XOLMAMATOV</h1>
           <p className="mb-4 fs-5">
             I'm a web developer who loves bringing innovative ideas to life.{" "}

@@ -4,22 +4,29 @@ import { Footer, Navbar } from "../components/index";
 
 function MainPage() {
   return (
-    <div className="" style={{ userSelect: "none" }}>
+    <div
+      className="d-flex flex-column h-100 w-100"
+      style={{ userSelect: "none" }}
+    >
       <header
-        className="header-section d-flex fixed-top"
-        style={{ marginBottom: "auto", height: "80px" }}
+        className="header-section d-flex fixed-top w-100"
+        style={{ marginBottom: "auto", height: "60px" }}
       >
         <Navbar />
       </header>
       <main
-        className="d-flex justify-content-center"
-        style={{ position: "absolute", top: "80px" }}
+        className="d-flex justify-content-center w-100 align-items-center"
+        style={{
+          position: "absolute",
+          top: "60px",
+          bottom: "60px",
+        }}
       >
         <Outlet />
       </main>
       <footer
-        className="bg-dark text-white d-flex justify-content-center"
-        style={{ marginTop: "auto" }}
+        className="bg-dark text-white d-flex justify-content-center fixed-bottom w-100"
+        style={{ marginTop: "auto", height: "60px" }}
       >
         <Footer />
       </footer>
