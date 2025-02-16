@@ -1,8 +1,8 @@
 function Home() {
   const DownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/public/resume.pdf"; // `public` papkasidagi faylga to‘g‘ri yo‘l
-    link.download = "MyResume.pdf"; // Yuklab olinadigan fayl nomi
+    link.href = "/dist/resume.pdf"; // `public` papkasidagi faylga to‘g‘ri yo‘l
+    link.download = "Resume.pdf"; // Yuklab olinadigan fayl nomi
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
