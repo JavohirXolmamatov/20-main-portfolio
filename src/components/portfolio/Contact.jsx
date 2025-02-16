@@ -51,9 +51,9 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="col-lg-7">
+        <div className="col-lg-7 ">
           <h3 className="mb-5 text-uppercase fw-bold">Contact form</h3>
-          <form>
+          <form className="">
             <div className="mb-4">
               <label
                 htmlFor="exampleInputName"

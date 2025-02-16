@@ -25,10 +25,7 @@ function AdminLogin() {
   return isLoading ? (
     <Loader />
   ) : (
-    <main
-      className="form-signin m-auto d-flex justify-content-center align-items-center w-100"
-      style={{ height: "92.2vh" }}
-    >
+    <main className="form-signin m-auto d-flex justify-content-center align-items-center w-100">
       <form className="w-20">
         <h1 className="h3 mb-3 fw-normal">Please login in</h1>
         <div className="form-floating mb-3">

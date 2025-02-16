@@ -42,7 +42,7 @@ function Projects() {
   };
 
   return (
-    <div className="container">
+    <div className="container h-100 w-100">
       {isProjectAdd ? (
         <AddProject setIsProjectAdd={setIsProjectAdd} />
       ) : isLoading ? (
@@ -55,10 +55,10 @@ function Projects() {
         />
       )}
 
-      <div className="w-100 text-center p-4">
+      <div className="w-100 text-center pb-5">
         {/* Faqat adminlarga 'Add Project' tugmasi chiqadi */}
         {!isProjectAdd && isAdmin && (
-          <button className="btn btn-primary" onClick={addProject}>
+          <button className="btn btn-primary mb-5" onClick={addProject}>
             Add project
           </button>
         )}

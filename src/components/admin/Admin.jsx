@@ -4,10 +4,20 @@ import AdminNavbar from "./AdminNavbar";
 function Admin() {
   return (
     <>
-      <header>
+      <header
+        className="header-section d-flex fixed-top w-100"
+        style={{ marginBottom: "auto", height: "60px" }}
+      >
         <AdminNavbar />
       </header>
-      <main className="">
+      <main
+        className="d-flex justify-content-center w-100 align-items-center"
+        style={{
+          position: "absolute",
+          top: "60px",
+          bottom: "60px",
+        }}
+      >
         <Outlet />
       </main>
     </>

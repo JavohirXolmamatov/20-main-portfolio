@@ -16,17 +16,24 @@ function Skills() {
     <div className="container w-100 h-100">
       <div
         className="d-flex flex-column justify-content-center h-100 w-100"
-        style={{ textAlign: "center", overflow: "scroll" }}
+        style={{
+          overflowY: "scroll",
+          WebkitScrollSnapType: "none",
+          scrollbarWidth: "none", // Firefox uchun
+          msOverflowStyle: "none", // IE va eski Edge uchun
+        }}
       >
-        <h1 className={classNames(styles.h1, styles.textGrad)}>Skills</h1>
-        <h2 className={classNames()}>
+        <h1 className={classNames(styles.h1, styles.textGrad, "text-center")}>
+          Skills
+        </h1>
+        <h2 className="text-center">
           The skills, tools and technologies I use:
         </h2>
         <div
           className="d-flex flex-wrap gap-3 w-100 justify-content-center pt-4"
           style={{ margin: "0 auto", width: "45%" }}
         >
-          <div className="row m-0 p-0 align-items-center justify-content-center g-3">
+          <div className="row m-0 p-0 align-items-center justify-content-center g-3 text-center">
             <div className="col-4 ">
               <img
                 src={html}
