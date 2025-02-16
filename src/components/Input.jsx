@@ -1,5 +1,3 @@
-import React from "react";
-
 function Input({ type = "text", state, setState, id, placeholder }) {
   return (
     <div className=" w-50 m-auto ">
