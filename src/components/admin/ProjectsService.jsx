@@ -17,29 +17,31 @@ function ProjectsService({ projects, setProjects, isAdmin }) {
       )}
 
       {projects?.length > 0 ? (
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 w-100 p-0 m-0 pt-3">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 w-100 p-0 m-0 pt-3 pb-5">
           {projects.map((project) => (
-            <div key={project.id} className="col" style={{ height: "30rem" }}>
+            <div key={project.id} className="col">
               <div className="card shadow-sm h-100">
                 <img
                   src={project.imagesLink}
                   alt={project.imagesLink}
-                  className="bd-placeholder-img card-img-top w-100"
-                  style={{ height: "15rem", objectFit: "cover" }}
+                  className="bd-placeholder-img card-img-top w-100 img-fluid"
+                  style={{ height: "", objectFit: "cover" }}
                 />
 
                 <div
-                  className="card-body d-flex flex-column"
-                  style={{ height: "15rem" }}
+                  className="card-body"
+                  // style={{ height: "15rem" }}
                 >
-                  <div>
-                    <p className="card-text text-center fw-bold fs-4 p-0 m-2">
-                      {project?.projectName}
-                    </p>
-                    <p className="card-text m-2 fs-5">{project?.title}</p>
-                    <p className="card-text m-2">{project?.description}</p>
-                  </div>
-                  <div className="d-flex justify-content-between align-items-center mt-auto">
+                  <p className="card-text text-center fw-bold fs-4 p-0 m-2">
+                    {project?.projectName}
+                  </p>
+                  <p className="card-text m-2 fs-5 text-center">
+                    {project?.title}
+                  </p>
+                  <p className="card-text m-2">{project?.description}</p>
+                </div>
+                <div className="card-footer">
+                  <div className="d-flex justify-content-between align-items-center">
                     <div className="btn-group">
                       <button
                         type="button"
@@ -67,14 +69,16 @@ function ProjectsService({ projects, setProjects, isAdmin }) {
                         </>
                       )}
                     </div>
-                    <small className="text-body-secondary">
-                      {project?.createdAt
-                        ? format(
-                            new Date(project.createdAt.seconds * 1000),
-                            "yyyy-MM-dd HH:mm"
-                          )
-                        : "Vaqt mavjud emas"}
-                    </small>
+                    <div>
+                      <small className="text-body-secondary">
+                        {project?.createdAt
+                          ? format(
+                              new Date(project.createdAt.seconds * 1000),
+                              "yyyy-MM-dd HH:mm"
+                            )
+                          : "Vaqt mavjud emas"}
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
